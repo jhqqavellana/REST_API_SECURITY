@@ -1,10 +1,9 @@
 package com.spring.spring_rest.entity;
 
-import org.springframework.data.annotation.Id;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
@@ -36,5 +35,4 @@ public class Auth_Role {
     public String toString() {
       return "Auth_Role [id=" + id + ", name=" + name + "]";
     }
-
 }
