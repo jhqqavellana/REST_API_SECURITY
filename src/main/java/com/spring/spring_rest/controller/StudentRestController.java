@@ -59,7 +59,7 @@ public class StudentRestController {
 
   @PatchMapping("{id}")
   public ResponseEntity<StudentDto> patchStudent(@PathVariable Long id,
-      @RequestBody StudentDto theStudentDto) {
+      @Valid @RequestBody StudentDto theStudentDto) {
     StudentDto studentDto = studentService.patchStudent(id, theStudentDto);
     return ResponseEntity.ok(studentDto);
   }
