@@ -1,17 +1,13 @@
 package com.spring.spring_rest.controller;
 
-import java.beans.BeanProperty;
 import java.util.Collections;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -129,14 +125,5 @@ public class AuthenticationController {
   public void setPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
     this.passwordEncoder = passwordEncoder;
   }
-
-  @Override
-  public String toString() {
-    return "AuthenticationController [authenticationManager=" + authenticationManager + ", authUserRepo=" + authUserRepo
-        + ", authRoleRepo=" + authRoleRepo + ", passwordEncoder=" + passwordEncoder + "]";
-  }
-
-
-
     
 }
